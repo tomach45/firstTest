@@ -27,6 +27,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
+	http.HandleFunc("/", viewHandler)
 	http.HandleFunc("/view/", viewHandler)
 	http.HandleFunc("/edit/", editHandler)
 	http.HandleFunc("/save/", saveHandler)
